@@ -3,7 +3,11 @@
 require 'pp'
 require './candidates'
 require './filters'
+require 'date'
 
 ## Your test code can go here
-
-pp @candidates
+# puts @candidates
+# pp @candidates
+# puts find(5)
+puts qualified_candidates(@candidates)
+puts ordered_by_qualifications(@candidates)
