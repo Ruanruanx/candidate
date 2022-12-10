@@ -30,12 +30,15 @@ def qualified_candidates(candidates)
 end
 
 # More methods will go below
+# def ordered_by_qualifications(candidates)
+#   candidates.sort{|x,y|
+#   if x[:years_of_experience]!=y[:years_of_experience]
+#     x[:years_of_experience]<=>y[:years_of_experience]
+#   else 
+#     x[:github_points]<=>y[:github_points]
+#   end
+#   }
+# end
 def ordered_by_qualifications(candidates)
-  candidates.sort{|x,y|
-    if(x[:years_of_experience]!=y[:years_of_experience])
-      y[:years_of_experience]<=>x[:years_of_experience]
-    else
-      y[:github_points]<=>x[:github_points]
-    end
-  }
+  candidates.sort_by{|candidate| candidate[:years_of_experience]}
 end
